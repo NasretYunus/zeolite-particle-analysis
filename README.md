@@ -7,7 +7,7 @@ Automated SEM particle size analysis for zeolite-doped optical films.
 This script performs quantitative image analysis on scanning electron microscopy (SEM) images to extract particle size distributions, 
 morphological statistics, and publication-quality visualizations. Designed for reproducible supplementary analysis in peer-reviewed manuscripts.
 
-**Author:** Nasrettin Yunus  
+**Authors:** Ali Emre Yunus, Nasrettin Yunus  
 
 ---
 
@@ -190,7 +190,7 @@ If you use this code, please cite:
 ```bibtex
 @software{yunus2026zeolite,
   title={Zeolite Particle Analysis: Automated SEM Image Segmentation},
-  author={Yunus, Nasrettin},
+  authors={Yunus, Ali Emre; Yunus, Nasrettin},
   year={2026},
   url={https://github.com/NasretYunus/zeolite-particle-analysis}
 }
@@ -204,8 +204,8 @@ MIT License — see LICENSE file
 
 ---
 
-## Author
-
+## Authors
+**Ali Emre Yunus**  
 **Nasrettin Yunus**  
 
 ## Support

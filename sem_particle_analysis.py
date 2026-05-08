@@ -1,7 +1,7 @@
 """
 SEM Particle Size Analysis 
 ================================================
-Author:    Nasrettin Yunus 
+Authors:    Ali Emre Yunus; Nasrettin Yunus 
 GitHub:     https://github.com/NasretYunus/sem-particle-analysis
 
 Description

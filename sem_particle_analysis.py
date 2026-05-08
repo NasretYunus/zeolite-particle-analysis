@@ -1,10 +1,7 @@
 """
 SEM Particle Size Analysis 
 ================================================
-Manuscript: Symmetry Breaking in Optical Backlighting: A Comparative T-Matrix and Mie Analysis of Polarization Discrimination in Spheroidal Zeolite-
-Doped Films
 Authors:    Nasrettin Yunus 
-Journal:    Optics Communications
 GitHub:     https://github.com/NasretYunus/sem-particle-analysis
 
 Description

@@ -19,13 +19,13 @@ Usage
 -----
     # From file:
     python sem_particle_analysis.py --image path/to/sem_image.png \
-                                    --scale_bar_px 412 \
+                                    --scale_bar_px 42 \
                                     --scale_bar_um 5 \
                                     --output results/
 
     # From clipboard:
     python sem_particle_analysis.py --clipboard \
-                                    --scale_bar_px 412 \
+                                    --scale_bar_px 42 \
                                     --scale_bar_um 5 \
                                     --output results/
 
@@ -55,7 +55,7 @@ warnings.filterwarnings("ignore")
 # ─────────────────────────────────────────────
 # 1.  CONFIGURATION  (edit defaults here)
 # ─────────────────────────────────────────────
-DEFAULT_SCALE_BAR_PX = 412      # length of scale bar in pixels
+DEFAULT_SCALE_BAR_PX = 42      # length of scale bar in pixels
 DEFAULT_SCALE_BAR_UM = 5.0      # physical length of scale bar (µm)
 MIN_PARTICLE_AREA_UM2 = 0.05    # discard objects smaller than this (µm²)
 MAX_PARTICLE_AREA_UM2 = 50.0    # discard objects larger than this (µm²)

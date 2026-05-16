@@ -1,0 +1,18 @@
+{
+  "N": 52,
+  "mean_um": 1.483,
+  "median_um": 1.078,
+  "std_um": 1.178,
+  "sem_um": 0.163,
+  "min_um": 0.484,
+  "max_um": 7.679,
+  "ci95_low": 1.155,
+  "ci95_high": 1.811,
+  "d10_um": 0.555,
+  "d50_um": 1.078,
+  "d90_um": 2.369,
+  "scale_bar_px": 42,
+  "scale_bar_um": 5.0,
+  "area_filter_min_um2": 0.05,
+  "area_filter_max_um2": 50.0
+}

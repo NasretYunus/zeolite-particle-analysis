@@ -46,35 +46,29 @@ pip install opencv-python scikit-image matplotlib scipy numpy pandas pillow
 ```
 
 ---
+## Input
+- Image: Fig. 2(b) from manuscript
+- Scale bar: 42 px = 5 µm (as measured from the embedded SEM scale bar)
 
 ## Usage
-
-### Basic usage (file input)
-```bash
-python sem_particle_analysis.py --image Fig_2b.png \
-    --scale_bar_px 412 \
+python sem_particle_analysis.py \
+    --image Fig2b_input.png \
+    --scale_bar_px 42 \
     --scale_bar_um 5 \
     --output results/
-```
 
-### From clipboard
-Copy an SEM image to your clipboard, then:
-```bash
-python sem_particle_analysis.py --clipboard \
-    --scale_bar_px 412 \
-    --scale_bar_um 5 \
-    --output results/
-```
+## Filter parameters
+- MIN_PARTICLE_AREA_UM2 = 0.05 µm²
+- MAX_PARTICLE_AREA_UM2 = 50.0 µm²
 
-### Command-line arguments
+## Results (n = 52)
+- Mean ECD:  1.483 µm
+- SD:        1.178 µm
+- Range:     0.484–7.679 µm
+- 95% CI:    [1.155, 1.811] µm
+- Median:    1.078 µm
+- D10/D50/D90: 0.556 / 1.078 / 2.369 µm
 
-| Argument | Type | Default | Description |
-|----------|------|---------|-------------|
-| `--image` | str | None | Path to SEM image (PNG/TIFF/BMP) |
-| `--clipboard` | flag | — | Load image from clipboard instead |
-| `--scale_bar_px` | float | 412 | Scale bar length in pixels |
-| `--scale_bar_um` | float | 5.0 | Scale bar physical length (µm) |
-| `--output` | str | `results/` | Output directory |
 
 ---
 
@@ -98,20 +92,16 @@ label,area_um2,ecd_um,major_axis_um,minor_axis_um,aspect_ratio,eccentricity,soli
 ### Example JSON structure
 ```json
 {
-  "N": 24,
-  "mean_um": 0.572,
-  "median_um": 0.463,
-  "std_um": 0.246,
-  "sem_um": 0.05,
-  "min_um": 0.339,
-  "max_um": 1.235,
-  "ci95_low": 0.469,
-  "ci95_high": 0.676,
-  "d10_um": 0.37,
-  "d50_um": 0.463,
-  "d90_um": 0.939
+  "N": 52,
+  "mean_um": 1.483,
+  "median_um": 1.078,
+  "std_um": 1.178,
+  "d10_um": 0.556,
+  "d50_um": 1.078,
+  "d90_um": 2.369
+    .............
 }
-```
+
 
 ---
 
@@ -120,7 +110,7 @@ label,area_um2,ecd_um,major_axis_um,minor_axis_um,aspect_ratio,eccentricity,soli
 Edit defaults in `sem_particle_analysis.py` (section 1):
 
 ```python
-DEFAULT_SCALE_BAR_PX = 412      # length of scale bar in pixels
+DEFAULT_SCALE_BAR_PX = 42      # length of scale bar in pixels
 DEFAULT_SCALE_BAR_UM = 5.0      # physical length of scale bar (µm)
 MIN_PARTICLE_AREA_UM2 = 0.05    # discard objects smaller than this (µm²)
 MAX_PARTICLE_AREA_UM2 = 50.0    # discard objects larger than this (µm²)
